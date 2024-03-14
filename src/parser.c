@@ -11,20 +11,20 @@
 
 /********************************************************** Data declarations */
 
-static ssize_t     line_len;           /* Buffer length */
+static ssize_t line_len;               /* Buffer length */
 static CommandType command;            /* Current instruction type */
-static int         line_num;           /* Line number */
-static char        *buffer;            /* Pointer to the current buffer */
-static char        *token;             /* Pointer to the token being parsed */
-static FILE        *fp;                /* File stream */
+static int line_num;                   /* Line number */
+static char *buffer;                   /* Pointer to the current buffer */
+static char *token;                    /* Pointer to the token being parsed */
+static FILE *fp;                       /* File stream */
 
 
 /******************************************************* Private Declarations */
 
-static inline bool is_extension_asm            (const char *);
+static inline bool is_extension_asm (const char *);
 static inline void discard_leading_withe_spaces(void);
-static inline bool is_blank_line               (void);
-static inline bool is_comment_line             (void);
+static inline bool is_blank_line (void);
+static inline bool is_comment_line (void);
 
 
 /***************************************************** Public Implementations */
@@ -84,7 +84,7 @@ parser_advance(void)
     }
 
     free(buffer);
-    buffer = NULL;
+    buffer = NULL;  /* Double free if there is an error reading the line */
 
     if ((len = getline(&line, &bufsize, fp)) == -1 && ferror(fp)) {
         free(line);

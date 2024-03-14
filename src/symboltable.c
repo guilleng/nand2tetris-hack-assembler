@@ -6,12 +6,12 @@
 #include <string.h>
 
 #include "common/shared_defs.h"
-#include "hashtable_adt.h"          /* github.com/guilleng/c-adts */
+#include "hashtable_adt.h"
 #include "symboltable.h"
 
 /*
- * Rationale behind the manifest constant `MAX_SYMBOL` - Permissible environment
- * SymbolAddressPairs.
+ * Rationale behind the manifest constant `MAX_SYMBOL` that defines the
+ * permissible environment of SymbolAddressPairs.
  *
  * In addition to determining the initial size of the hash table to allocate,
  * it imposes an upper bound on the number of symbol-value pairs that the
@@ -24,12 +24,12 @@
  * declares approximately 900 distinct identifiers.  Determined by the 
  * command `cat Pong.asm | grep ^\( | sort | uniq | wc --lines`
  */
-#define MAX_SYMBOL    2048    
+#define MAX_SYMBOL 2048    
 
 
 /********************************************************** Data declarations */
 
-HashTableADT *Table = NULL;
+static HashTableADT *Table = NULL;
 
 static SymbolAddressPair ProgramSymbols[MAX_SYMBOL];  /* Runtime environment */
 static uint16_t SymbolCount = 0;

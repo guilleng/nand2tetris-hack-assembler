@@ -1,14 +1,14 @@
 /*
  * Part of the Hack Assembler from Nand2Tetris.
  *
- * This is the Parser module, as described in Chapter 6 of "The Elements of
+ * Parser module interface, as described in Chapter 6 of "The Elements of
  * Computing Systems: Building a Modern Computer from First Principles" by
  * Noam Nisan and Shimon Shocken.
  *
  * This module accesses the input code managing its fields and symbols.
  * 
- * Its implementation `parser.c` relies on a set of variables that model the
- * status of the parsing process.  All operations over its variables are
+ * Its implementation `parser.c` relies on a set of local variables that model
+ * the status of the parsing process.  All operations over its variables are
  * abstracted away and accessed through these interface functions.  Strings
  * returned are null-terminated.
  */

@@ -3,7 +3,7 @@
 
 #include "code.h"
 
-#define MAX_SYMBOL_LEN      4      /* Max length of a mnemonic string */
+#define MAX_SYMBOL_LEN 4        /* Max length of a mnemonic string */
 
 
 /********************************************************** Data Declarations */

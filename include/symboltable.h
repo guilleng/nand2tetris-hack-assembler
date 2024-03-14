@@ -1,7 +1,7 @@
 /*
  * Brief: Part of the Hack Assembler from Nand2Tetris.
  *
- * This is the SymbolTable module, as described in Chapter 6 of "The Elements of
+ * SymbolTable module interface, as described in Chapter 6 of "The Elements of
  * Computing Systems: Building a Modern Computer from First Principles" by Noam
  * Nisan and Shimon Shocken.
  *

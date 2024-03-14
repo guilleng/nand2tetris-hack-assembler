@@ -1,7 +1,7 @@
 /*
  * Brief: Part of the Hack Assembler from Nand2Tetris.
  *
- * This is the Code module, as described in Chapter 6 of "The Elements of
+ * Code module interface, as described in Chapter 6 of "The Elements of
  * Computing Systems: Building a Modern Computer from First Principles" by
  * Noam Nisan and Shimon Shocken.
  * 
@@ -15,8 +15,8 @@
  * the `ERROR` macro if applicable.
  *
  * The rationale behind this design is: 
- * - The constant arrays pairs are self-explanatory. 
- * - It simplifies error detection and makes the task of 'assembling' the
+ * + The constant arrays pairs are self-explanatory. 
+ * + It simplifies error detection and makes the task of 'assembling' the
  *   `dest`, `comp`, and `jump` fields easy, using bitwise OR, as follows: 
  *
  * For instance, `D|M` is represented as the integer 85, in binary: `1010101`.
